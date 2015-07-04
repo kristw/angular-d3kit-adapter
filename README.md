@@ -37,3 +37,14 @@ bower install angular-d3kit-adapter --save
  >
  </custom-chart>
  ```
+
+### Releasing
+
+Dry run first
+```
+grunt bump --dry-run
+```
+Then
+```
+npm publish
+```
