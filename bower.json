@@ -6,7 +6,7 @@
     "Krist Wongsuphasawat <krist.wongz@gmail.com>"
   ],
   "description": "Convert a chart created using d3Kit into an angular directive in one command",
-  "main": "src/angular-d3Kit-adapter.js",
+  "main": "dist/angular-d3kit-adapter.min.js",
   "moduleType": [
     "amd",
     "globals"
@@ -18,6 +18,9 @@
     "chart",
     "visualization"
   ],
+  "dependencies": {
+    "angular": "~1.4.1"
+  },
   "license": "MIT",
   "ignore": [
     "**/.*",

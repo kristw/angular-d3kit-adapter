@@ -2,7 +2,7 @@
   "name": "angular-d3kit-adapter",
   "version": "0.0.0",
   "description": "Convert a chart created using d3Kit into an angular directive in one command",
-  "main": "src/angular-d3kit-adapter.js",
+  "main": "dist/angular-d3kit-adapter.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +22,18 @@
   "bugs": {
     "url": "https://github.com/kristw/angular-d3kit-adapter/issues"
   },
-  "homepage": "https://github.com/kristw/angular-d3kit-adapter"
+  "homepage": "https://github.com/kristw/angular-d3kit-adapter",
+  "dependencies": {
+    "angular": "~1.4.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-bump": "^0.3.1",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-uglify": "~0.3.2",
+    "load-grunt-tasks": "~0.3.0",
+    "time-grunt": "~0.2.9"
+  }
 }
