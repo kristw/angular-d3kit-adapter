@@ -112,10 +112,10 @@ function (angular) {
             }
 
             // connect event listener pass from html for each custom events
-            listenerNames.forEach(function(name){
+            chartFn.getCustomEvents().forEach(function(eventName, index){
               chart.on(eventName+'.chartDirectiveFactory', function(){
                 var self = this;
-                var listener = scope[name]();
+                var listener = scope[listenerNames[index]]();
                 if(angular.isFunction(listener)){
                   var args = Array.prototype.slice.call(arguments);
                   listener.apply(self, args);
