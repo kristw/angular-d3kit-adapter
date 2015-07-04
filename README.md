@@ -1,5 +1,7 @@
 # angular-d3kit-adapter
-Convert a chart created using d3Kit into an angular directive in one command!
+Convert a chart created using [d3Kit](https://github.com/twitter/d3kit) into an AngularJS directive in one command!
+
+See [demo](http://bl.ocks.org/kristw/71d73ecee8c7be61a8a7)
 
 ### Installation
 
@@ -13,11 +15,49 @@ or
 bower install angular-d3kit-adapter --save
 ```
 
-### USAGE
+This module supports AMD, CommonJS and browser globals out of the box.
+
+### Usage
+First, use the adapter to plug a chart to angular module.
+
+```
+// .plug(angularModule, chartName, chartConstructorFunction)
+```
+
+Globals
+
+```
+<script src="angular-d3kit-adapter.min.js"></script>
+<script>
+// global
+var module = angular.module('something',[]);
+angular.d3KitAdapter.plug(module, 'bubbleChart', BubbleChart);
+</script>
+```
+
+AMD
+
+```
+define(['angular', 'angular-d3kit-adapter'], function(angular, d3KitAdapter){
+  var module = angular.module('something',[]);
+  d3KitAdapter.plug(module, 'bubbleChart', BubbleChart);
+));
+```
+
+CommonJS
+
+```
+var d3KitAdapter = require('angular-d3kit-adapter');
+
+var module = angular.module('something',[]);
+d3KitAdapter.plug(module, 'bubbleChart', BubbleChart);
+```
+
+Then use the directive as you wish.
 
 ```
 // tag name is dasherized chartName parameter that is passed to plug()
-<custom-chart
+<bubble-chart
   // $scope.data
   chart-data="data"
   // $scope.options
@@ -35,10 +75,10 @@ bower install angular-d3kit-adapter --save
   chart-on-custom-event1="listener1"
   chart-on-custom-event2="listener2"
  >
- </custom-chart>
+ </bubble-chart>
  ```
 
-### Releasing
+### Development
 
 To build, bump and publish
 ```
