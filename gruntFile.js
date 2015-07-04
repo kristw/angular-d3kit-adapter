@@ -111,26 +111,19 @@ module.exports = function (grunt) {
     'uglify:dist'
   ]);
 
-  grunt.registerTask('publish:patch', 'Bundle code, bump and publish to npm', [
-    'build',
-    'bump:patch',
-    'shell:publish'
-  ]);
-
-  grunt.registerTask('publish:minor', 'Bundle code, bump and publish to npm', [
-    'build',
-    'bump:minor',
-    'shell:publish'
-  ]);
-
-  grunt.registerTask('publish:major', 'Bundle code, bump and publish to npm', [
-    'build',
-    'bump:major',
-    'shell:publish'
-  ]);
-
-  grunt.registerTask('publish', 'Bundle code, bump and publish to npm', [
-    'publish:patch'
-  ]);
+  grunt.registerTask('publish', 'Bundle code, bump and publish to npm', function(mode){
+    var bumpMode;
+    switch(mode){
+      case 'major': bumpMode = 'major'; break;
+      case 'minor': bumpMode = 'minor'; break;
+      default:
+      case 'patch': bumpMode = 'patch'; break;
+    }
+    grunt.task.run([
+      'build',
+      'bump:' + bumpMode,
+      'shell:publish'
+    ]);
+  });
 
 };
