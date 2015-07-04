@@ -89,13 +89,11 @@ module.exports = function (grunt) {
     },
 
     shell: {
+      options: {
+        stderr: false
+      },
       publish: {
-        options: {
-          stderr: false
-        },
-        target: {
-          command: 'npm publish'
-        }
+        command: 'npm publish'
       }
     }
 
