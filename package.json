@@ -1,6 +1,6 @@
 {
   "name": "angular-d3kit-adapter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Convert a chart created using d3Kit into an angular directive in one command",
   "main": "dist/angular-d3kit-adapter.min.js",
   "scripts": {
