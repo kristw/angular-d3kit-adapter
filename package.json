@@ -1,0 +1,26 @@
+{
+  "name": "angular-d3kit-adapter",
+  "version": "0.0.0",
+  "description": "Convert a chart created using d3Kit into an angular directive in one command",
+  "main": "src/angular-d3kit-adapter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kristw/angular-d3kit-adapter.git"
+  },
+  "keywords": [
+    "angular",
+    "d3kit",
+    "angular-d3kit-adapter",
+    "chart",
+    "visualization"
+  ],
+  "author": "kristw <krist.wongz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kristw/angular-d3kit-adapter/issues"
+  },
+  "homepage": "https://github.com/kristw/angular-d3kit-adapter"
+}
