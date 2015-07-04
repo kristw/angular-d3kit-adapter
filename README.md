@@ -46,5 +46,5 @@ grunt bump --dry-run
 ```
 Then
 ```
-npm publish
+grunt bump && npm publish
 ```
