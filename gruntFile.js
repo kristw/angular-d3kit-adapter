@@ -86,6 +86,17 @@ module.exports = function (grunt) {
         prereleaseName: false,
         regExp: false
       }
+    },
+
+    shell: {
+      publish: {
+        options: {
+          stderr: false
+        },
+        target: {
+          command: 'npm publish'
+        }
+      }
     }
 
   });
@@ -100,6 +111,12 @@ module.exports = function (grunt) {
     'copy:dist',
     // - minify the packaged javascript
     'uglify:dist'
+  ]);
+
+  grunt.registerTask('publish', 'Bundle code, bump and publish to npm', [
+    'build',
+    'bump',
+    'shell:publish'
   ]);
 
 };

@@ -40,11 +40,19 @@ bower install angular-d3kit-adapter --save
 
 ### Releasing
 
-Dry run first
+To build, bump and publish
+```
+grunt publish
+```
+
+#### For debugging
+
+Build minified version
+```
+grunt build
+```
+Dry run bump version
 ```
 grunt bump --dry-run
 ```
-Then
-```
-grunt bump && npm publish
-```
+
